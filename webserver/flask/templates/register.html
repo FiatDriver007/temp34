@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %} 
+<form method=POST action="{{ url_for('register') }}">
+    <fieldset>
+        <legend>Gebruikersinformatie</legend>
+        <p><label for="Naam">Naam</label><br><input type="text" class="form-control" name="naam" placeholder="Menno Fit"></p>
+        <p><label for="Email">Email</label><br><input type="email" class="form-control" name="email" placeholder="menno@altijdfit.nl"></p>
+        <p><label for="Wachtwoord">Wachtwoord</label><br><input type="password" class="form-control" name="wachtwoord" placeholder="Wachtwoord"></p>
+        <p><label for="Adres">Adres</label><br><input type="text" class="form-control" name="adres" placeholder="Wegisweg 200"></p>
+        <p><label for="Postcode">Postcode</label><br><input type="text" class="form-control" name="postcode" placeholder="1234 AB"></p>
+        <p><label for="Stad">Stad</label><br><input type="text" class="form-control" name="stad" placeholder="Londen"></p>
+    </fieldset>
+    <button type="submit" class="btn btn-primary btn-block">Register</button>
+</form>
+
+<br>
+<a href="{{ url_for('loginpage') }}">Login</a>.<br>
+
+{% endblock %}
